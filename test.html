@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Тест Шкала депрессии Бека</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="test-container">
+  <h1>Тест по шкале депрессии Бека</h1>
+  <form id="depressionTest">
+    <!-- Вопросы и ответы как раньше -->
+    <!-- ... (тот же код вопросов) ... -->
+    <button type="submit">Подсчитать результат</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('depressionTest').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const answers = document.querySelectorAll('input[type="radio"]:checked');
+    let totalScore = 0;
+    answers.forEach((answer) => {
+      totalScore += parseInt(answer.value);
+    });
+    let message = "";
+    if (totalScore <= 4) {
+      message = "Минимальные признаки депрессии.";
+    } else if (totalScore <= 13) {
+      message = "Лёгкие признаки депрессии.";
+    } else if (totalScore <= 20) {
+      message = "Умеренные признаки депрессии.";
+    } else {
+      message = "Тяжёлые признаки депрессии — рекомендуется обратиться к специалисту.";
+    }
+    document.getElementById('result').textContent = `Ваш результат: ${totalScore}. ${message}`;
+  });
+</script>
+
+</body>
+</html>
+
