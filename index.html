@@ -3,110 +3,32 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Вход и тест Шкала депрессии Бека</title>
-<!-- Подключение внешнего CSS файла -->
+<title>Вход</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- Форма входа -->
 <div class="login-container">
   <h2>Вход в систему</h2>
-  <form id="loginForm">
+  <form id="loginForm" action="test.html" method="get">
     <label for="username">Логин</label>
     <input type="text" id="username" required />
 
     <label for="password">Пароль</label>
     <input type="password" id="password" required />
 
+    <!-- Кнопка для входа -->
     <button type="submit">Войти</button>
   </form>
   <div class="footer">
-    Нет аккаунта? <a href="#">Зарегистрироваться</a>
+    Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
   </div>
 </div>
 
-<!-- Контейнер с тестом -->
-<div class="test-container" style="display:none;" id="testContainer">
-  <h1>Тест по шкале депрессии Бека</h1>
-  <form id="depressionTest">
-    <!-- Вопрос 1 -->
-    <div class="question" data-score="0">
-      <h3>1. Я чувствовал(а) себя подавленным(ой) или грустным(ой):</h3>
-      <div class="answers">
-        <label><input type="radio" name="q1" value="0" required /> Не испытывал(а)</label>
-        <label><input type="radio" name="q1" value="1" /> Несколько дней</label>
-        <label><input type="radio" name="q1" value="2" /> Более половины дней</label>
-        <label><input type="radio" name="q1" value="3" /> Почти каждый день</label>
-      </div>
-    </div>
+</body>
+</html>
 
-    <!-- Вопрос 2 -->
-    <div class="question" data-score="0">
-      <h3>2. Я чувствовал(а) усталость или потерю энергии:</h3>
-      <div class="answers">
-        <label><input type="radio" name="q2" value="0" required /> Не испытывал(а)</label>
-        <label><input type="radio" name="q2" value="1" /> Несколько дней</label>
-        <label><input type="radio" name="q2" value="2" /> Более половины дней</label>
-        <label><input type="radio" name="q2" value="3" /> Почти каждый день</label>
-      </div>
-    </div>
 
-    <!-- Вопрос 3 -->
-    <div class="question" data-score="0">
-      <h3>3. Я испытывал(а) чувство безнадежности:</h3>
-      <div class="answers">
-        <label><input type="radio" name="q3" value="0" required /> Не испытывал(а)</label>
-        <label><input type="radio" name="q3" value="1" /> Несколько дней</label>
-        <label><input type="radio" name="q3" value="2" /> Более половины дней</label>
-        <label><input type="radio" name="q3" value="3" /> Почти каждый день</label>
-      </div>
-    </div>
-
-    <!-- Можно добавить больше вопросов по мере необходимости -->
-
-    <button type="submit">Подсчитать результат</button>
-  </form>
-  <div id="result"></div>
-</div>
-
-<!-- Скрипт -->
-<script>
-  // Обработка входа
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Можно добавить проверку логина/пароля, здесь просто показываем тест
-    document.querySelector('.login-container').style.display = 'none';
-    document.getElementById('testContainer').style.display = 'block';
-  });
-
-  // Обработка теста
-document.getElementById('depressionTest').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Собираем оценки
-    const answers = document.querySelectorAll('input[type="radio"]:checked');
-    let totalScore = 0;
-
-    answers.forEach((answer) => {
-      totalScore += parseInt(answer.value);
-    });
-
-    // Выводим результат
-    let message = "";
-    if (totalScore <= 4) {
-      message = "Минимальные признаки депрессии.";
-    } else if (totalScore <= 13) {
-      message = "Лёгкие признаки депрессии.";
-    } else if (totalScore <= 20) {
-      message = "Умеренные признаки депрессии.";
-    } else {
-      message = "Тяжёлые признаки депрессии — рекомендуется обратиться к специалисту.";
-    }
-
-    document.getElementById('result').textContent = Ваш результат: ${totalScore}. ${message};
-  });
 </script>
 
 </body>
