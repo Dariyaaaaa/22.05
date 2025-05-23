@@ -77,19 +77,18 @@
     color: #555;
   }
 
-  /* Нижняя панель - фиксированная */
+  /* Нижняя панель - убрали фон и скругления */
   .bottom-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around; /* равномерное распределение */
     align-items: center;
-    background: rgba(255,255,255,0.9);
-    padding: 10px 0;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
+    background: transparent; /* прозрачный фон */
+    padding: 10px 0;
   }
 
   /* Кнопки-иконки */
@@ -127,7 +126,7 @@
   </div>
 </div>
 
-<!-- Нижняя панель с кнопками -->
+<!-- Нижняя панель с иконками без белой панели -->
 <div class="bottom-nav">
   <button class="icon-btn"><i class="fas fa-cog"></i></button>
   <button class="icon-btn"><i class="fas fa-search"></i></button>
@@ -136,7 +135,6 @@
 
 </body>
 </html>
-
 
 
 
