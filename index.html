@@ -14,7 +14,13 @@
     margin: 30px; /* внешний отступ */
     padding: 30px; /* внутренний отступ */
     font-family: 'Comfortaa', Arial, sans-serif; /* Используем Comfortaa */
-        background: radial-gradient(circle at left center, #ffffff, #e0d7f4 100%);
+           /* Радиальный градиент: центр чуть левее, с плавным переходом через три цвета */
+    background: radial-gradient(
+      circle at 30% 50%, /* центр чуть левее по горизонтали */
+      #ffffff,          /* белый */
+      #d8b3ff,          /* светло-фиолетовый */
+      #0000ff           /* синий */
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
