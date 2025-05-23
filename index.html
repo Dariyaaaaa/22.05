@@ -4,28 +4,159 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Вход</title>
-<link rel="stylesheet" href="styles.css" />
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b19cd9, #e0ccff); /* градиент для фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Контейнер для формы */
+  .container {
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 50px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Заголовок */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  /* Поля ввода */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #e0e0e0;
+  }
+
+  /* Кнопка входа */
+  button.login-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4ba3f6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button.login-btn:hover {
+    background-color: #357ae8;
+  }
+
+  /* Заголовок "Вход" */
+  h2 {
+    margin: 0 0 10px 0;
+  }
+
+  /* Блок с кнопками снизу */
+  .bottom-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Стиль кнопок снизу */
+  .bottom-buttons button {
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+
+  /* "Sign up" — яркая */
+  .sign-up {
+    background-color: #3399ff;
+    color: white;
+  }
+
+  .sign-up:hover {
+    background-color: #2672cc;
+  }
+
+  /* "Log in" — с рамкой и фоном */
+  .log-in {
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000;
+  }
+
+  .log-in:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Адаптация под мобильные */
+  @media(max-width: 400px) {
+    body {
+      padding: 10px;
+    }
+    .container {
+      padding: 15px;
+    }
+  }
+</style>
 </head>
 <body>
-<div class="login-container">
-  <h2>Вход в систему</h2>
-  <form id="loginForm" action="test.html" method="get">
-    <label for="username">Логин</label>
-    <input type="text" id="username" required />
 
-    <label for="password">Пароль</label>
-    <input type="password" id="password" required />
-
-    <!-- Кнопка для входа -->
-    <button type="submit">Войти</button>
+<!-- Контейнер формы -->
+<div class="container">
+  <h2>Кушнарева Дарья Александровна</h2>
+  <h1>Вход</h1>
+  <form id="loginForm">
+    <input type="text" placeholder="Логин" id="login" required />
+    <input type="password" placeholder="Пароль" id="password" required />
+    <button type="submit" class="login-btn">Войти →</button>
   </form>
-  <div class="footer">
-    Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
-  </div>
 </div>
+
+<!-- Блок снизу с двумя кнопками -->
+<div class="bottom-buttons">
+  <button class="sign-up" onclick="alert('Переход на страницу регистрации')">Sign up</button>
+  <button class="log-in" onclick="alert('Переход на страницу входа')">Log in</button>
+</div>
+
+<script>
+  // Обработка формы входа
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Вы вошли!'); // здесь можно делать переход или проверку
+  });
+</script>
 
 </body>
 </html>
+
 
 
 </script>
