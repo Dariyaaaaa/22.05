@@ -76,7 +76,69 @@ h1 {
 .arrow {
   font-size: 20px;
 }
+/* Заголовки */
+.header {
+  text-align: center;
+  padding-top: 50px;
+}
 
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin-top: 4px;
+}
+
+/* Кнопка */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 300px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.button-text {
+  font-size: 1em;
+}
+
+.arrow {
+  font-size: 1.2em;
+}
+
+/* Нижняя панель */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+  padding: 10px 0;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+.bottom-nav i {
+  font-size: 24px;
+  cursor: pointer;
+}
 
 
 
