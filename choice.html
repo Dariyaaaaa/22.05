@@ -41,38 +41,44 @@
     text-align: center;
   }
 
-  /* Карточка "Шкала депрессии Бека" с центрированием текста */
-  .card {
-    width: 340px;
-    height: 125px;
-    margin: 20px auto; /* Центрировать карточку по горизонтали */
-   background-color: rgba(176, 160, 224, 1);
-    border-radius: 45px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px;
-    display:flex; 
-    align-items:center; /* Вертикальное центрирование содержимого */
-    justify-content:center; /* Центрировать содержимое по горизонтали */
-    cursor:pointer;
-    transition: box-shadow 0.3s ease;
-    box-sizing:border-box;
+ /* Карточка */
+.card {
+  max-width: 90%; /* чтобы не выходила за границы экрана */
+  width: 340px;   /* минимальная ширина */
+  height: 125px;
+  margin: 20px auto; /* центрирование по горизонтали */
+  background-color: rgba(176, 160, 224, 1);
+  border-radius: 45px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  
+  display:flex; 
+  align-items:center; /* вертикальное центрирование содержимого */
+  justify-content:center; /* горизонтальное центрирование содержимого */
+  
+  cursor:pointer;
+  transition: box-shadow 0.3s ease;
+  
+  box-sizing:border-box;
 }
-/* Стиль для изменения цвета при наведении или при выделении */
-.card:hover,
-.card.selected {
-  background-color : rgba(144,128,208,1);
-}
+
 /* Внутренний блок с текстом и стрелкой */
 .card-inner {
     display:flex; 
     align-items:center; 
+    flex-wrap: nowrap; /* чтобы содержимое не переносилось */
+    width:100%; /* занимает всю ширину карточки */
 }
-* Текст внутри карточки */
-  .card-title {
-    width: 291px;
-    height: 56px;
-    font-size: 25px;
-    color: #fff;
+
+/* Текст внутри карточки */
+.card-title {
+    max-width: calc(100% - 30px); /* чтобы оставить место под стрелку */
+    height:56px;
+    font-size:25px;
+    color:#fff;
+    white-space: nowrap; /* чтобы текст не переносился на новую строк */
+    overflow: hidden; /* скрывать переполнение текста */
+    text-overflow: ellipsis; /* добавлять многоточие при переполнении */
 }
 
 /* Иконка стрелки справа */
