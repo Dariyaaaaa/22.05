@@ -76,6 +76,7 @@ h1 {
 .arrow {
   font-size: 20px;
 }
+/* ВЫБОР ТЕСТА 2 СТРАНИЦА */
 /* Заголовки */
 .header {
   text-align: center;
@@ -104,16 +105,21 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 20px; /* Можно оставить, но при фиксированных размерах можно убрать или подкорректировать */
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
+  border-radius: 45px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  width: 80%;
-  max-width: 300px;
+  width: 340px;       /* фиксированная ширина */
+  height: 125px;      /* фиксированная высота */
+  max-width: none;    /* отключаем ограничение max-width */
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   color: #000;
+  
+  /* Для правильного отображения содержимого внутри */
+  flex-direction: column; /* чтобы текст и стрелка располагались вертикально, если нужно */
+  justify-content: space-around; /* равномерное распределение по вертикали */
 }
 
 .button-text {
