@@ -120,14 +120,13 @@ h1 {
 
 
 .button-text {
-  font-size: 64em;
+  font-size: 25em;
 }
-
-/* Иконка стрелки */
+/* Стрелка иконка */
 .arrow {
-  font-size: 4em;
+  width: 35px;
+  height: 35px; 
 }
-
 /* Нижняя панель */
 .bottom-nav {
   display: flex;
