@@ -51,101 +51,96 @@
     text-align: center;
   }
 
-  /* Карточка "Шкала депрессии Бека" */
+  /* Карточка "Шкала депрессии Бека" с центрированием текста */
   .card {
     width: 340px;
     height: 125px;
-    margin: 20px auto;
+    margin: 20px auto; /* Центрировать карточку по горизонтали */
     background-color: #fff;
     border-radius: 45px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+    padding: 15px;
+    display:flex; 
+    align-items:center; /* Вертикальное центрирование содержимого */
+    justify-content:center; /* Центрировать содержимое по горизонтали */
+    cursor:pointer;
     transition: box-shadow 0.3s ease;
-    box-sizing: border-box;
-  }
+    box-sizing:border-box;
+}
 
-  /* Текст внутри карточки */
-  .card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+/* Внутренний блок с текстом и стрелкой */
+.card-inner {
+    display:flex; 
+    align-items:center; 
+}
 
-  /* Название теста */
-  .card-title {
-    font-size: 25px;
-    line-height: 64px;
-    margin: 0;
-  }
+/* Текст внутри карточки */
+.card-title {
+    font-size:25px;
+}
 
-  /* Иконка стрелки */
-  .arrow-icon {
-    font-size: 1.2em;
-    color: #555;
-  }
+/* Иконка стрелки справа */
+.arrow-icon {
+    margin-left:15px; /* Расстояние между текстом и стрелкой */
+}
 
-  /* Нижняя панель с иконками без фона */
-  .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: transparent; /* прозрачный фон */
-    padding: 10px 0;
-  }
+/* Нижняя панель с иконками без фона */
+.bottom-nav {
+  display:flex; 
+  justify-content:space-around; 
+  align-items:center; 
+  width:100%; 
+  position:fixed; 
+  bottom:0; 
+  left:0; 
+  right:0; 
+  background:transparent; /* прозрачный фон */
+  padding:10px 0;
+}
 
-  /* Кнопки-иконки */
-  .icon-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px;
-    color: #333;
-    transition: color 0.2s;
-  }
+/* Кнопки-иконки */
+.icon-btn {
+   background:none; 
+   border:none; 
+   cursor:pointer; 
+   padding:10px; 
+   font-size:24px; 
+   color:#333; 
+   transition:.2s all ease-in-out;
+}
 
-  .icon-btn:hover {
-    color: #000;
-  }
+.icon-btn:hover {
+   color:#000;
+}
 </style>
 </head>
 <body>
 
 <!-- Заголовок и подзаголовок, выравненные по центру -->
 <div class="header">
-  <h1>Мои тесты</h1>
-  <p>Нет пройденных тестов</p>
+<h1>Мои тесты</h1>
+<p>Нет пройденных тестов</p>
 </div>
 
-<!-- Карточка -->
+<!-- Карточка с центровкой текста -->
 <div class="card">
-  <div class="card-text">
-    <div class="card-title">Шкала депрессии Бека</div>
-  </div>
-  <div class="arrow-icon">
-    <i class="fas fa-arrow-right"></i>
-  </div>
+ <div class="card-inner">
+   <div class="card-title">Шкала депрессии Бека</div>
+   <div class="arrow-icon">
+     <i class="fas fa-arrow-right"></i>
+   </div>
+ </div>
 </div>
 
 <!-- Нижняя панель с иконками без фона -->
 <div class="bottom-nav">
-  <button class="icon-btn"><i class="fas fa-cog"></i></button>
-  <button class="icon-btn"><i class="fas fa-search"></i></button>
-  <button class="icon-btn"><i class="fas fa-user"></i></button>
+ <button class="icon-btn"><i class="fas fa-cog"></i></button>
+ <button class="icon-btn"><i class="fas fa-search"></i></button>
+ <button class="icon-btn"><i class="fas fa-user"></i></button>
 </div>
 
 </body>
 </html>
-
 
 
 
