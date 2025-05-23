@@ -120,7 +120,8 @@ h1 {
 
 
 .button-text {
-  font-size: 25em;
+    width: 291px;
+  height: 64px; 
 }
 /* Стрелка иконка */
 .arrow {
