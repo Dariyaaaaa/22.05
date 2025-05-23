@@ -11,54 +11,54 @@
 <style>
   /* Общие стили для страницы */
   body {
-    margin: 0;
-    padding: 0;
+    margin: 30px; /* внешний отступ */
+    padding: 30px; /* внутренний отступ */
     font-family: 'Comfortaa', Arial, sans-serif; /* Используем Comfortaa */
     background: linear-gradient(135deg, #c8baff, #e0d7f4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 100vh;
+    min-height: calc(100vh - 60px); /* чтобы учитывать отступы */
+    box-sizing: border-box; /* чтобы padding и margin учитывались */
   }
 
   h1 {
     margin-top: 30px;
     font-size: 48px;
-    font-weight: normal; /* или жирность по желанию */
+    font-weight: normal;
     color: #000;
-    /* Убираем box-shadow */
     box-shadow: none;
-    /* Добавляем тень только для текста */
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   }
 
   /* Стиль для полей ввода */
   .input-field {
-    width: 80%;
-    max-width: 300px;
+    width: 280px; /* фиксированная ширина */
+    height: 75px; /* фиксированная высота */
     padding: 15px;
     margin: 15px 0;
     border-radius: 25px;
     border: none;
-    background-color: rgba(240, 240, 240, 0.5); /* Полупрозрачный фон */
-    font-family: 'Comfortaa', Arial, sans-serif; /* Обеспечиваем единый шрифт */
+    background-color: rgba(240, 240, 240, 0.5);
+    font-family: 'Comfortaa', Arial, sans-serif;
     font-size: 16px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     outline: none;
+    box-sizing: border-box;
   }
 
-  /* Стиль для кнопки */
+  /* Стиль для кнопки входа */
   .login-button {
-    width: 80%;
-    max-width: 300px;
+    width: 280px; /* фиксированная ширина */
+    height: 75px; /* фиксированная высота */
     padding: 15px;
     margin-top: 20px;
     border-radius: 25px;
     border: none;
-    background-color: rgba(176, 160, 224, 0.5); /* Полупрозрачный цвет фона */
+    background-color: rgba(176, 160, 224, 0.5);
     color: #fff;
-    font-family: 'Comfortaa', Arial, sans-serif; /* Обеспечиваем единый шрифт */
+    font-family: 'Comfortaa', Arial, sans-serif;
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -66,6 +66,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+    box-sizing: border-box;
   }
 
   /* Эффект при наведении */
@@ -105,12 +106,12 @@
     const login = document.getElementById('login').value;
     const password = document.getElementById('password').value;
     alert(`Логин: ${login}\nПароль: ${password}`);
-    // Здесь можно добавить обработку входа
   }
 </script>
 
 </body>
-</html>
+</htm
+
 
 
 
