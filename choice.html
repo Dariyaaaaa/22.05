@@ -42,11 +42,12 @@
   }
 
  /* Карточка */
+/* Карточка */
 .card {
-  max-width: 90%; /* чтобы не выходила за границы экрана */
-  width: 400px;   /* минимальная ширина */
+  max-width: 90%;
+  width: 400px;
   height: 125px;
-  margin: 20px auto; /* центрирование по горизонтали */
+  margin: 20px auto;
   background-color: rgba(176, 160, 224, 1);
   border-radius: 45px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -61,24 +62,22 @@
   
   box-sizing:border-box;
 }
-  .card:hover,
-.card.selected {
-  background-color : rgba(144,128,208,1);
-  }
+
 /* Внутренний блок с текстом и стрелкой */
 .card-inner {
     display:flex; 
     align-items:center; 
-    flex-wrap: nowrap; /* чтобы содержимое не переносилось */
-    width:100%; /* занимает всю ширину карточки */
+    justify-content:center; /* по желанию, чтобы содержимое было по центру внутри */
+    width:100%;
+    height:100%; /* занимает всю высоту карточки */
 }
 
 /* Текст внутри карточки */
 .card-title {
-    max-width: calc(100% - 30px); /* чтобы оставить место под стрелку */
-    height:56px;
     font-size:25px;
     color:#fff;
+    margin:0; /* убираем лишние отступы */
+    padding:0;
 
 }
 
