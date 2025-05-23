@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <link rel="stylesheet" href="style.css" />
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Мои тесты</title>
-<!-- Подключение иконок Font Awesome -->
+<!-- Подключение Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
 <style>
   /* Общие стили */
   body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #c0b7e8, #e0d7f4); /* градиент фона */
+    background: linear-gradient(135deg, #c0b7e8, #e0d7f4);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     color: #000;
   }
 
   /* Заголовок и подзаголовок */
-.header {
-  text-align: center;
-  padding: 20px 10px;
-}
+  .header {
+    text-align: center;
+    padding: 20px 10px;
+  }
 
-.header h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin: 0;
-}
+  .header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
+  .header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 
-/* Карточка */
-.card {
-  background-color: #fff;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 350px;
-  margin: 20px auto;
-  padding: 15px 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
+  /* Карточка */
+  .card {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
 
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
 
-.card-text {
-  display: flex;
-  flex-direction: column;
-}
+  .card-text {
+    display: flex;
+    flex-direction: column;
+  }
 
-.card-title {
-  font-size: 1.2em;
-  font-weight: 600;
-  margin: 0;
-}
+  .card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+  }
 
-.card-subtitle {
-  font-size: 0.9em;
-  margin-top: 5px;
-}
+  .card-subtitle {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
 
-.arrow-icon {
-  font-size: 1.2em;
-  color: #555;
-}
+  .arrow-icon {
+    font-size: 1.2em;
+    color: #555;
+  }
 
-/* Нижняя панель */
-.bottom-nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background: rgba(255,255,255,0.9);
-  padding: 10px 0;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-  margin-top: auto;
-}
+  /* Нижняя панель - фиксированная */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 
-/* Иконки в нижней панели */
-.bottom-nav i {
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-  transition: color 0.2s;
-}
+  /* Кнопки-иконки */
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.2s;
+  }
 
-.bottom-nav i:hover {
-  color: #000;
-}
+  .icon-btn:hover {
+    color: #000;
+  }
 </style>
 </head>
 <body>
@@ -123,11 +127,11 @@
   </div>
 </div>
 
-<!-- Нижняя панель -->
+<!-- Нижняя панель с кнопками -->
 <div class="bottom-nav">
-  <i class="fas fa-cog"></i>
-  <i class="fas fa-search"></i>
-  <i class="fas fa-user"></i>
+  <button class="icon-btn"><i class="fas fa-cog"></i></button>
+  <button class="icon-btn"><i class="fas fa-search"></i></button>
+  <button class="icon-btn"><i class="fas fa-user"></i></button>
 </div>
 
 </body>
