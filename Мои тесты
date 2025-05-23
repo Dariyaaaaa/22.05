@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Мои тесты</title>
+<style>
+  /* Общие стили */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 80% 50%, 
+      rgba(237, 231, 252, 0.3), 
+      rgba(237, 216, 252, 0.3), 
+      rgba(179, 172, 250, 0.3), 
+      rgba(133, 108, 223, 0.3), 
+      rgba(115, 107, 235, 0.3));
+    justify-content: space-between;
+  }
+
+  /* Заголовки */
+  .header {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 1em;
+    margin-top: 4px;
+  }
+
+  /* Кнопка */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  .custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 300px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .button-text {
+    font-size: 1em;
+  }
+
+  /* Иконка стрелки */
+  .arrow {
+    font-size: 1.2em;
+  }
+
+  /* Нижняя панель */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  }
+
+  .bottom-nav i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+<!-- Подключение иконок Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Заголовки -->
+<div class="header">
+  <h1 class="title">Мои тесты</h1>
+  <p class="subtitle">Нет пройденных тестов</p>
+</div>
+
+<!-- Кнопка -->
+<div class="button-container">
+  <a href="#" class="custom-button">
+    <span class="button-text">Школа депрессии Бека</span>
+    <i class="fas fa-arrow-right arrow"></i>
+  </a>
+</div>
+
+<!-- Нижняя панель -->
+<div class="bottom-nav">
+  <i class="fas fa-cog"></i>
+  <i class="fas fa-search"></i>
+  <i class="fas fa-user-circle"></i>
+</div>
+
+</body>
+</html>
+
