@@ -14,21 +14,20 @@
     margin: 30px; /* внешний отступ */
     padding: 30px; /* внутренний отступ */
     font-family: 'Comfortaa', Arial, sans-serif; /* Используем Comfortaa */
-background: radial-gradient(
-  circle at 30% 50%,
-  rgba(237, 231, 252, 0.5), /* #EDE7FC */
-  rgba(237, 216, 252, 0.5), /* #EDD8FC */
-  rgba(179, 172, 250, 0.5), /* #B3ACFA */
-  rgba(133, 108, 223, 0.5), /* #856CDF */
-  rgba(115, 107, 235, 0.5)  /* #736FEB */
-);
+    background: radial-gradient(
+      circle at 30% 50%,
+      rgba(237, 231, 252, 0.5),
+      rgba(237, 216, 252, 0.5),
+      rgba(179, 172, 250, 0.5),
+      rgba(133, 108, 223, 0.5),
+      rgba(115, 107, 235, 0.5)
     );
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    min-height: calc(100vh - 60px); /* чтобы учитывать отступы */
-    box-sizing: border-box; /* чтобы padding и margin учитывались */
+    min-height: calc(100vh - 60px);
+    box-sizing: border-box;
   }
 
   h1 {
@@ -42,8 +41,8 @@ background: radial-gradient(
 
   /* Стиль для полей ввода */
   .input-field {
-    width: 280px; /* фиксированная ширина */
-    height: 75px; /* фиксированная высота */
+    width: 280px;
+    height: 75px;
     padding: 15px;
     margin: 15px 0;
     border-radius: 45px;
@@ -58,8 +57,8 @@ background: radial-gradient(
 
   /* Стиль для кнопки входа */
   .login-button {
-    width: 280px; /* фиксированная ширина */
-    height: 75px; /* фиксированная высота */
+    width: 280px;
+    height: 75px;
     padding: 15px;
     margin-top: 20px;
     border-radius: 45px;
@@ -109,17 +108,22 @@ background: radial-gradient(
   <span class="arrow">→</span>
 </button>
 
-
 <script>
   function login() {
     const login = document.getElementById('login').value;
     const password = document.getElementById('password').value;
-    alert(`Логин: ${login}\nПароль: ${password}`);
+    if (login && password) {
+      // Перенаправление на страницу choice.html
+      window.location.href = 'choice.html';
+    } else {
+      alert('Пожалуйста, введите логин и пароль.');
+    }
   }
 </script>
 
 </body>
 </html>
+
 
 
 
