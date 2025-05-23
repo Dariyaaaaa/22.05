@@ -66,12 +66,12 @@
     cursor:pointer;
     transition: box-shadow 0.3s ease;
     box-sizing:border-box;
-  .card:hover,
-.card.selected:hover {
+}
+/* Стиль для изменения цвета при наведении или при выделении */
+.card:hover,
+.card.selected {
   background-color : rgba(144,128,208,1);
 }
-}
-
 /* Внутренний блок с текстом и стрелкой */
 .card-inner {
     display:flex; 
@@ -116,7 +116,6 @@
 .icon-btn:hover,
 .icon-btn :active { /* можно оставить так для эффекта наведения и нажатия одновременно */   
    background-color : rgba(144,128,208,1);
-}
 }
 </style>
 </head>
