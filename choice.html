@@ -44,14 +44,14 @@
  /* Карточка */
 .card {
   max-width: 90%; /* чтобы не выходила за границы экрана */
-  width: 340px;   /* минимальная ширина */
+  width: 400px;   /* минимальная ширина */
   height: 125px;
   margin: 20px auto; /* центрирование по горизонтали */
   background-color: rgba(176, 160, 224, 1);
   border-radius: 45px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 15px;
-  
+
   display:flex; 
   align-items:center; /* вертикальное центрирование содержимого */
   justify-content:center; /* горизонтальное центрирование содержимого */
@@ -61,7 +61,10 @@
   
   box-sizing:border-box;
 }
-
+  .card:hover,
+.card.selected {
+  background-color : rgba(144,128,208,1);
+  }
 /* Внутренний блок с текстом и стрелкой */
 .card-inner {
     display:flex; 
