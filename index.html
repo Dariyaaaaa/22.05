@@ -22,15 +22,18 @@
     height: 100vh;
   }
 
-  /* Заголовок */
-  h1 {
-    margin-top: 30px;
-    font-size: 48px;
-    font-weight: normal; /* Comfortaa по умолчанию не жирный, можно добавить жирность при необходимости */
-    color: #000;
-    box-shadow: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
+ h1 {
+  margin-top: 30px;
+  font-size: 48px;
+  font-weight: normal; /* или жирность по желанию */
+  color: #000;
+  /* Убираем box-shadow */
+  box-shadow: none;
+  /* Добавляем тень только для текста */
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 
   /* Стиль для полей ввода */
 .input-field {
