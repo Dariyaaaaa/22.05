@@ -16,32 +16,39 @@
 
 <!-- Внутренние стили -->
 <style>
-
-  /* Заголовок "Мои тесты" */
-  .header h1 {
-    width: 312px;
-    height: 54px;
-    font-size: 48px;
-    line-height: 54px;
-    margin: 0 auto; /* по центру */
+  /* Общие стили для тела */
+  body {
+    margin: 0;
+    font-family: 'Comfortaa', Arial, sans-serif;
+    background: linear-gradient(135deg, #c0b7e8, #e0d7f4);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #000;
   }
 
-  /* Текст "Нет пройденных тестов" */
-  .header p {
-    width: 289px;
-    height: 45px;
-    font-size: 25px;
-    line-height: 45px;
-    margin-top: 10px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+  /* Стиль для блока заголовков */
+  .header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;       /* вертикальное расположение */
+    align-items: center;          /* по центру */
+    margin-top: 20px;
+  }
+
+  /* Стиль для заголовка "Мои тесты" */
+  .header h1 {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Стиль для текста "Нет пройденных тестов" */
+  .header p {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 25px;
+    margin: 10px 0 0 0;
+    text-align: center;
   }
 
   /* Карточка "Шкала депрессии Бека" */
@@ -61,15 +68,18 @@
     box-sizing: border-box;
   }
 
-  /* Размер и стиль текста внутри карточки */
+  /* Текст внутри карточки */
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Название теста */
   .card-title {
-    width: 291px;
-    height: 64px;
     font-size: 25px;
     line-height: 64px;
     margin: 0;
-    display: flex;
-    align-items: center;
   }
 
   /* Иконка стрелки */
@@ -78,7 +88,7 @@
     color: #555;
   }
 
-  /* Нижняя панель - иконки без фона */
+  /* Нижняя панель с иконками без фона */
   .bottom-nav {
     display: flex;
     justify-content: space-around;
@@ -110,7 +120,7 @@
 </head>
 <body>
 
-<!-- Заголовок и подзаголовок -->
+<!-- Заголовок и подзаголовок, выравненные по центру -->
 <div class="header">
   <h1>Мои тесты</h1>
   <p>Нет пройденных тестов</p>
@@ -120,7 +130,6 @@
 <div class="card">
   <div class="card-text">
     <div class="card-title">Шкала депрессии Бека</div>
-    
   </div>
   <div class="arrow-icon">
     <i class="fas fa-arrow-right"></i>
@@ -136,6 +145,7 @@
 
 </body>
 </html>
+
 
 
 
